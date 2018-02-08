@@ -1,0 +1,45 @@
+<ion-header>
+  
+<ion-title class="title"><p>Sign In</p></ion-title>
+
+</ion-header>
+
+
+<ion-content style="background-image:url('assets/imgs/we-are-mack-1400x600.png')" padding>
+
+  <div class="margin">
+    <h5>Sign in with</h5>
+    <img  src="assets/imgs/img_203160 copy.png" width="50" />
+  </div>
+
+  <ion-card style="background-color:transparent;box-shadow:none;border-radius:10px;margin-top:10px;height:180px;">
+   
+        
+  <ion-card-content>
+
+     
+    <form [formGroup]="LoginForm">
+    <ion-list>
+      <ion-item style="background-color:white; opacity:0.5; border-radius:5px;">
+        <ion-label fixed><ion-icon name="md-mail"></ion-icon></ion-label>
+        <ion-input formControlName="email" type="text" placeholder="Email Address"></ion-input>
+      </ion-item><br>
+
+      <ion-item style="background-color:white; opacity:0.5; border-radius:5px;">
+        <ion-label fixed><ion-icon name="md-lock"></ion-icon></ion-label>
+        <ion-input formControlName="password" type="password"placeholder="Password"></ion-input>
+      
+      </ion-item>
+    </ion-list><br>
+    <button [disabled]="!this.LoginForm.valid" style="box-shadow:none;border-radius:10px; background-color:transparent; opacity:0.5; border: 1px solid white" block ion-button (click)="login()">Submit</button>
+
+  </form>
+  </ion-card-content>
+  
+
+</ion-card>  
+
+  <div style="text-align:center;"><p style="color: white;font-size:12px; opacity:0.5;">Forget Your Password?</p></div><br>
+   <div style="text-align:center;"><p style="color: white;font-size:12px; opacity:0.5;">Don't Have an Account</p></div><br>
+  <button style="box-shadow:none;border-radius:10px; background-color:transparent; opacity:0.5; border: 1px solid white" block ion-button (click)="register()">Register Now</button>
+</ion-content>

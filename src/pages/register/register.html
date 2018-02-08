@@ -1,0 +1,42 @@
+<ion-header>
+
+  <ion-title class="title"><p>Sign UP</p></ion-title>
+
+</ion-header>
+
+
+<ion-content style="background-image:url('assets/imgs/we-are-mack-1400x600.png')" padding>
+  <div class="margin">
+    <h5>Create Your New Account</h5>
+    <img  src="assets/imgs/img_203160 copy.png" width="50" />
+  </div>
+  <ion-card style="background-color:transparent;box-shadow:none;border-radius:10px;margin-top:10px;height:240px;">
+    
+        
+  <ion-card-content>
+    <form [formGroup]="signupForm">
+    <ion-list>
+        <ion-item style="background-color:white; opacity:0.5; border-radius:5px;">
+            <ion-label fixed><ion-icon name="person"></ion-icon></ion-label>
+            <ion-input formControlName="username" type="text" placeholder="Username"></ion-input>
+          </ion-item><br>
+
+      <ion-item style="background-color:white; opacity:0.5; border-radius:5px;">
+        <ion-label fixed><ion-icon name="md-mail"></ion-icon></ion-label>
+        <ion-input formControlName="email" type="text" placeholder="Email Address"></ion-input>
+      </ion-item><br>
+
+      <ion-item style="background-color:white; opacity:0.5; border-radius:5px;">
+        <ion-label fixed><ion-icon name="md-lock"></ion-icon></ion-label>
+        <ion-input formControlName="password" type="password" placeholder="Password"></ion-input>
+      </ion-item>
+    </ion-list>
+    
+    <button style="box-shadow:none;border-radius:10px; background-color:transparent; opacity:0.5; border: 1px solid white;margin-top:20px;" [disabled]="!this.signupForm.valid" ion-button block (click)="Register()">Submit</button>
+  </form>
+  </ion-card-content>
+  </ion-card>
+  <div style="text-align:center;"><p style="color: white;font-size:12px; opacity:0.5;">Forget Your Password?</p></div><br>
+   <div style="text-align:center;"><p style="color: white;font-size:12px; opacity:0.5;">Already Login</p></div><br>
+  <button style="box-shadow:none;border-radius:10px; background-color:transparent; opacity:0.5; border: 1px solid white" block ion-button (click)="login()">Login Now</button>
+</ion-content>
